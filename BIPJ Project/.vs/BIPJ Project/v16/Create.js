@@ -1,3 +1,5 @@
+var image = ""
+
 document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
   const dropZoneElement = inputElement.closest(".drop-zone");
 
@@ -62,7 +64,9 @@ function updateThumbnail(dropZoneElement, file) {
     const reader = new FileReader();
 
     reader.readAsDataURL(file);
+    
     reader.onload = () => {
+      image = reader.result
       thumbnailElement.style.backgroundImage = `url('${reader.result}')`;
     };
   } else {
@@ -81,10 +85,11 @@ function updateThumbnail(dropZoneElement, file) {
     let Create = [];
    
     const addMovie = (ev)=>{
+      localStorage.clear() // clear all 
 
        ev.preventDefault();  //to stop the form submitting
         let create = {
-            image : document.getElementById('image').value,
+            image : image,
             artNetwork : document.getElementById('art').value,
             link : document.getElementById('link').value,
             desc : document.getElementById('desc').value,
@@ -103,10 +108,10 @@ function updateThumbnail(dropZoneElement, file) {
         Create.push(create);
 
         //saving to localStorage
-        localStorage.setItem('payment_Details', JSON.stringify(Create) );
-        var getAll = localStorage.getItem("payment_Details");
+        localStorage.setItem('payment_create', JSON.stringify(Create) );
+        var getAll = localStorage.getItem("payment_create");
 
-        saveText( getAll, "Create_Details.json" );
+        saveText( getAll, "payment_create.json" );
         location.href = "TokenDetails.html"
     }
     document.addEventListener('DOMContentLoaded', ()=>{

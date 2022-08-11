@@ -51,10 +51,9 @@ const data = [{
 ]
 
 window.onload = function(){
-    
     let url = window.location.href;
     let id = url.split("id=")[1];
-    
+
 
     if(data[0][1].id == id){
         document.getElementById('items').innerHTML = data[0][1].items;
@@ -80,6 +79,7 @@ window.onload = function(){
 }
 
 function saveText(text, filename){
+  
     var a = document.createElement('a');
     a.setAttribute('href', 'data:text/plain;charset=utf-8,'+encodeURIComponent(text));
     a.setAttribute('download', filename);
@@ -90,6 +90,12 @@ function saveText(text, filename){
     let payment_Details = [];
    
     const addMovie = (ev)=>{
+        const queryString = window.location.search;
+
+        const urlParams = new URLSearchParams(queryString);
+        const od = urlParams.get('id')
+    
+
         console.log(ev)
         let url = window.location.href;
         let id = url.split("id=")[1];
@@ -98,6 +104,7 @@ function saveText(text, filename){
             
         ev.preventDefault();  //to stop the form submitting
         let pay = {
+            id: od,
             items: data[0][1].items,
             totalPrice: data[0][1].floorPrice,
             Image: data[0][1].profile,
@@ -179,22 +186,23 @@ function saveText(text, filename){
     //     saveText( getAll, "payment_details.json" );
     //     location.href = "thanks.html"
     // }
+        // document.getElementById("myForm").addEventListener("submit", myFunction);
 
 
 
-//     document.addEventListener('DOMContentLoaded', ()=>{
-//         document.getElementById('btn').addEventListener('click', addMovie);
+    document.addEventListener('DOMContentLoaded', ()=>{
+        document.getElementById('myForm').addEventListener('submit', addMovie);
 
-// });
+});
 
-     function validateForm() {
+     function myFunction() {
+        console.log("lets GOO")
             let x = document.forms["myForm"]["cardNo"].value;
-            console.log(document.form["myForm"])
+            console.log(x)
             // addMovie(
         }
 
 
 
-
-
+      
 

@@ -90,7 +90,7 @@ function saveText(text, filename){
     let payment_Details = [];
    
     const addMovie = (ev)=>{
-     
+        console.log(ev)
         let url = window.location.href;
         let id = url.split("id=")[1];
 
@@ -107,13 +107,13 @@ function saveText(text, filename){
             expYear : document.getElementById('expYear').value,
             cvv : document.getElementById('cvv').value,
         }
-            // payment_Details.push(pay);
+            payment_Details.push(pay);
             //saving to localStorage
-            // localStorage.setItem('payment_Details', JSON.stringify(payment_Details) );
-            // var getAll = localStorage.getItem("payment_Details");
+            localStorage.setItem('payment_Details', JSON.stringify(payment_Details) );
+            var getAll = localStorage.getItem("payment_Details");
 
-            // saveText( getAll, "payment_details.json" );
-            // location.href = "thanks.html"
+            saveText( getAll, "payment_details.json" );
+            location.href = "thanks.html"
 
         }
         
@@ -131,11 +131,11 @@ function saveText(text, filename){
         }
             payment_Details.push(pay);
             //saving to localStorage
-            // localStorage.setItem('payment_Details', JSON.stringify(payment_Details) );
-            // var getAll = localStorage.getItem("payment_Details");
+            localStorage.setItem('payment_Details', JSON.stringify(payment_Details) );
+            var getAll = localStorage.getItem("payment_Details");
 
-            // saveText( getAll, "payment_details.json" );
-            // location.href = "thanks.html"
+            saveText( getAll, "payment_details.json" );
+            location.href = "thanks.html"
         }
         if(data[0][3].id == id){
             ev.preventDefault();  //to stop the form submitting
@@ -149,13 +149,13 @@ function saveText(text, filename){
                 expYear : document.getElementById('expYear').value,
                 cvv : document.getElementById('cvv').value,
             }
-                // payment_Details.push(pay);
+                payment_Details.push(pay);
                 // saving to localStorage
-                // localStorage.setItem('payment_Details', JSON.stringify(payment_Details) );
-                // var getAll = localStorage.getItem("payment_Details");
+                localStorage.setItem('payment_Details', JSON.stringify(payment_Details) );
+                var getAll = localStorage.getItem("payment_Details");
     
                 saveText( getAll, "payment_details.json" );
-                // location.href = "thanks.html"
+                location.href = "thanks.html"
         }
     }
     
@@ -181,13 +181,17 @@ function saveText(text, filename){
     // }
 
 
-    
+
 //     document.addEventListener('DOMContentLoaded', ()=>{
 //         document.getElementById('btn').addEventListener('click', addMovie);
 
 // });
 
-
+     function validateForm() {
+            let x = document.forms["myForm"]["cardNo"].value;
+            console.log(document.form["myForm"])
+            // addMovie(
+        }
 
 
 

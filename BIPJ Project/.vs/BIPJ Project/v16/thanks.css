@@ -1,0 +1,14 @@
+body{
+    padding: 50px;
+}
+h1{
+    color: orange;
+    font-weight: 700;
+    text-align: center;
+  }
+  h2{
+    color: black;
+    font-weight: 800;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow';
+    text-align: center;
+  }  

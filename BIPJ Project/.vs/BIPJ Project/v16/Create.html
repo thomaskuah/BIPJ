@@ -1,0 +1,102 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Create.css">
+    
+    <title>Create Form</title>
+</head>
+<body>
+    <hr>
+    <nav class="navbar">
+        <!-- LOGO -->
+        <div class="logo"><img class="imgs" src="img/logo.PNG"> NEXT TEAM</div>
+        <div class="container">
+            <form action="">
+                <input class="SearchBar" type="text" placeholder="Search items, collections and accounts" name="q">
+            </form>
+        </div>
+        <!-- NAVIGATION MENU -->
+        <ul class="nav-links">
+          <!-- NAVIGATION MENUS -->
+          <div class="menu">
+            <li><a href="MainPage.html">Explore</a></li>
+            <li><a href="/">Following</a></li>
+            <li><a href="/">Stats</a></li>
+            <li><a href="Create.html">Create</a></li>
+            <li><a href="/"><img src="img/user.png" width="30px;" height="30px;" alt="image"></a></li>
+            <li><a href="/"><img src="img/wallet.png" width="30px;" height="30px;" alt="image"></a></li>
+          </div>
+        </ul>
+      </nav>
+      <hr>
+    <div class="all">
+    <h1 class="newItem">Create New Item</h1>
+    <p style="padding-bottom: 20px;">Image, Video, Audio or 3D Model</p>
+    <p style="padding-bottom: 20px;">Files Types Supported: JPG, PNG, GIF, SVG, MP4, WEBM, MP3, WAV, OGG, GLB, GLTF Max Size: 40MB</p>
+    <div class="drop-zone">
+        <span class="drop-zone__prompt">Drop a file here or click to upload
+            <br>
+            Maximum Upload Size is: 1.54MB
+        </span>
+        <input type="file" name="myFile" id="image" class="drop-zone__input">
+      </div>
+      <script src="Create.js"></script>
+
+
+    <h1>Name of Artwork*</h1>
+    <p style="padding-bottom: 20px;" >Please Use Your Full Name Of Your Artwork</p>
+    <input type="text" id="art" placeholder="E.g BAYC">
+    
+
+    <h1>External Link (Optional)</h1>
+    <p style="padding-bottom: 20px;" >We will include a link to this URL on this item’s detail page, so that users can click to learn more about it. 
+        You are welcome to link your own webpage with more details</p>
+    <input type="text" id="link" placeholder="E.g Https://yoursite.io/item/123">
+
+    <h1>Description*</h1>
+    <p style="padding-bottom: 20px;">The description will be included on the item’s detail page underneath it’s image. Markdown Syntax is supported</p>
+    <textarea class="desc" id="desc" rows="8" cols="100" type="text" placeholder="Enter Description Here..."></textarea>
+    
+    <h1>Collection*</h1>
+    <p style="padding-bottom: 20px;" >This is the collection where your item will appear</p>
+    <label for="Music" class="mus1">Music</label>
+    <input type="checkbox" id="Music" name="Music" value="Music"><br>
+
+    <label for="Domain Names" class="mus2">Domain Names</label>
+    <input type="checkbox" id="Domain Names" name="Domain Names" value="Domain Names"><br>
+
+    <label for="Photography" class="mus3">Photography</label>
+    <input type="checkbox" id="Photography" name="Photography" value="Photography"><br>
+    <label for="Sports" class="mus4">Sports</label>
+    <input type="checkbox" id="Sports" name="Sports" value="Sports"><br>
+    <label for="Trading Cards" class="mus5">Trading Cards</label>
+    <input type="checkbox" id="Trading Cards" name="Trading Cards" value="Trading Cards"><br>
+    <label for="Utility" class="mus6">Utility</label>
+    <input type="checkbox" id="Utility" name="Utility" value="Utility"><br>
+    <label for="Virtual World" class="mus7">Photography</label>
+    <input type="checkbox" id="Virtual World" name="Virtual World" value="Virtual World"><br>
+    <label for="Events" class="mus8">Events</label>
+    <input type="checkbox" id="Events" name="Events" value="Events"><br>
+    <label for="Art" class="mus9">Art</label>
+    <input type="checkbox" id="Art" name="Art" value="Art"><br><br>
+    
+    <h1  for="Blockchain">Blockchain</h1>Choose the blockchain technology you want to smart contract on run it<br><br>
+    <select class="blockchain" name="BlockchainPlatforms" id="BlockchainPlatforms">
+    <option value="Ethereum" style="background-image:url();">Ethereum</option>
+    <option value="Klaytn" style="background-image:url();">Klaytn</option>
+    <option value="Solana" style="background-image:url();">Solana</option>
+    </select>
+    <br><br>
+
+    <h1>Supply</h1>
+    <p style="padding-bottom: 20px;">The number of copies that can be minted</p>
+    <input type="number" id="supply" placeholder="1"> <br><br>
+    
+    <a href="thanks.html">
+    <input type="submit" id="btn" class="submit" value="NEXT">
+  </a>
+    </div>
+</body>
+</html>

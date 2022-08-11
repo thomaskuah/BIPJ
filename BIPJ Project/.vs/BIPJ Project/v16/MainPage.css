@@ -1,0 +1,115 @@
+/* UTILITIES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   }
+   body {
+    font-family: cursive;
+   }
+   a {
+    text-decoration: none;
+   }
+   li {
+    list-style: none;
+   }
+
+   /* NAVBAR STYLING STARTS */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color:white;
+    color: black;
+   }
+   .nav-links a {
+    color: gray;
+   }
+   /* LOGO */
+   .logo {
+    font-size: 32px;
+   }
+   /* NAVBAR MENU */
+   .menu {
+    display: flex;
+    gap: 1em;
+    font-size: 18px;
+   }
+   .menu li:hover {
+    display: inline-block;
+    background-color:red;
+    transition: 0.3s ease;
+    border-radius: 3px;
+    padding: 10px;
+  }
+
+   .menu li {
+    padding: 5px 14px;
+   }
+
+  .SearchBar{
+    width: 500px;
+    height: 40px;
+    padding: 8px;
+    background-color: white;
+    border-radius: 5px;
+  }
+  
+.submit{
+    padding: 5px;
+    height: 40px;
+    width: 60px;
+}
+
+.menu li:active {
+color: red;
+}
+
+.Categories{
+  
+    margin-left: 10%;
+    margin-right: 10%;
+    
+    justify-content: space-between;
+    
+    background-color:white;
+    color: black;
+}
+
+
+
+.Collection{
+  text-align: center;
+  padding:50px;
+
+}
+
+
+.Line{
+  margin-left:8%; 
+  margin-right:8%;
+  color: black;
+}
+
+.CategoryList {
+  display: flex;
+  gap: 1.1em;
+  font-size: 14px;
+ }
+ .CategoryList li:hover {
+  display: inline-block;
+  background-color:red;
+  transition: 0.3s ease;
+  border-radius: 3px;
+  padding: 10px;
+}
+
+ .CategoryList li {
+  padding: 5px 14px 0px 14px;
+ }
+ 
+
+.MainPageImage{
+  padding-top: 50px;
+}

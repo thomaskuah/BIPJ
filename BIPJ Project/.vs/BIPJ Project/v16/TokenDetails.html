@@ -39,13 +39,7 @@
   <div class="all">
     <h1 class="newItem">Token Details</h1>
 
-    <!-- <h2><img src="img/property.PNG" class="imgs"> Properties</h2>
-    <p>Please Include all the perks and benefits the user would recieve</p>
-    <select class="blockchain" name="BlockchainPlatforms" id="BlockchainPlatforms">
-      <option value="Ethereum" style="background-image:url();">Enter park 2</option>
-      <option value="Klaytn" style="background-image:url();">Meet And Greet Section with Artist</option>
-    </select> -->
-    <!-- ADD TAGS -->
+ 
 
     <div class="wrapper">
       <div class="title">
@@ -72,24 +66,37 @@
     </label>
 
     <h2><img src="img/age.PNG" class="imgs"> Miminimum Age</h2>
-    <p>Does Your item require Miminimum age </p>
+    <p>Does Your item require Miminimum age of 18</p>
     <label id="ss" class="switch">
       <input type="checkbox" checked>
       <span class="slider round"></span>
     </label>
 
-
+<form action="thanks.html" id="newForm" >
     <h2>Set Price</h1>
       <p>Set a price for your Token</p>
       <br>
-      <input style="padding-left: 3px;" type="text" placeholder="Enter Price"> <br><br>
-
+      <input style="padding-left: 3px;" type="text" placeholder="Enter Price" id="Price" required onkeypress="return restrictAlphabets(event)"> <br><br>
       <a>
-        <input type="submit" onclick="goNext()" class="submit" value="Submit">
+        <input type="submit" class="submit">
       </a>
+    </form>
   </div>
 
   <script src="TokenDetails.js"></script>
 </body>
+<script>
 
+  function restrictAlphabets(e) {
+              var x = e.which || e.keycode;
+              if ((x >= 48 && x <= 57))
+                  return true;
+              else
+                  return false;
+          }
+          
+  </script>
 </html>
+
+
+

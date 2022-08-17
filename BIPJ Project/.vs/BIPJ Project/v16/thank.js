@@ -58,11 +58,11 @@ if (pullBuy) {
 
   document.getElementById("imgProd").src = getProd.image; // set img
   document.getElementById("Username").innerHTML = Username; // username
+  document.getElementById("Price").innerHTML = getProd.floorPrice; // set price
 
   console.log(getProd);
 } else {
     document.getElementById("Username").innerHTML = pullCreate[0].artNetwork; // username
     document.getElementById("imgProd").src = pullCreate[0].image; // set img
-
+    document.getElementById("Price").innerHTML = pullCreate[0].price; // set price
 }
-// apply data into html

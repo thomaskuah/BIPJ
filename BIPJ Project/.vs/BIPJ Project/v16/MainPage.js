@@ -46,6 +46,8 @@
     }
 
 ]
+
+
 function CheckBrowser() {
     if ('localStorage' in window && window['localStorage'] !== null) {
         return true;

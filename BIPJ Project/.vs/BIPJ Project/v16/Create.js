@@ -115,8 +115,10 @@ function updateThumbnail(dropZoneElement, file) {
         location.href = "TokenDetails.html"
     }
     document.addEventListener('DOMContentLoaded', ()=>{
-      document.getElementById('btn').addEventListener('click', addMovie);
+      document.getElementById('newform').addEventListener('submit', addMovie);
 
+
+    
 });
 
   

@@ -50,6 +50,17 @@ removeBtn.addEventListener("click", () =>{
 });
 
 function goNext() {
-    location.href = "thanks.html"
+    var create = []
     console.log("go go go")
+    var price = document.getElementById('Price').value
+    var obj = JSON.parse(localStorage.getItem("payment_create"));
+    console.log(obj)
+    var newObj = {...obj[0], price: price}
+    create.push(newObj)
+    localStorage.setItem('payment_create', JSON.stringify(create))
 }
+
+document.addEventListener('DOMContentLoaded', ()=>{
+    document.getElementById('newForm').addEventListener('submit', goNext);
+});
+

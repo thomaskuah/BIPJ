@@ -8,7 +8,7 @@ const data = [{
         "description1":"Incredibly popular with young children, it's common to find Exodonkey around schools and homes of young families. Their naturally careful disposition allows them to operate safely around vulnerable populations and can offer aid to their caretakers.",
         "items":"10.0K",
         "owner":"3.1K",
-        "floorPrice":"1.35",
+        "floorPrice":"1.35 Eth",
         "totalVolumn":"6.7K",
         "image":"img/Profile1Header.jpg",
         "profile":"img/Profile1Square.jpg",
@@ -24,7 +24,7 @@ const data = [{
         "description1":"Incredibly popular with young children, it's common to find Exodonkey around schools and homes of young families. Their naturally careful disposition allows them to operate safely around vulnerable populations and can offer aid to their caretakers.",
         "items":"10.0K",
         "owner":"4.1K",
-        "floorPrice":"2.35",
+        "floorPrice":"2.35 Eth",
         "totalVolumn":"3.7K",
         "image":"img/Profile1Header.jpg",
         "profile":"img/Profile1Square.jpg",
@@ -40,7 +40,7 @@ const data = [{
         "description1":"Incredibly popular with young children, it's common to find Exodonkey around schools and homes of young families. Their naturally careful disposition allows them to operate safely around vulnerable populations and can offer aid to their caretakers.",
         "items":"10.0K",
         "owner":"3.1K",
-        "floorPrice":"1.35",
+        "floorPrice":"1.35 Eth",
         "totalVolumn":"6.7K",
         "image":"img/Profile1Header.jpg",
         "profile":"img/Profile1Square.jpg",
@@ -56,23 +56,23 @@ window.onload = function(){
 
 
     if(data[0][1].id == id){
-        document.getElementById('items').innerHTML = data[0][1].items;
+        document.getElementById('items').innerHTML = data[0][1].name;
         document.getElementById('floorPrice').innerHTML = data[0][1].floorPrice;
-        document.getElementById('totalPrice').innerHTML = "$"+data[0][1].floorPrice;
+        document.getElementById('totalPrice').innerHTML = data[0][1].floorPrice;
         let profileImg = document.getElementById("img"); 
         profileImg.src =  data[0][1].profile;
     }
     else if(data[0][2].id == id){
-        document.getElementById('items').innerHTML = data[0][2].items;
+        document.getElementById('items').innerHTML = data[0][2].name;
         document.getElementById('floorPrice').innerHTML = data[0][2].floorPrice;
-        document.getElementById('totalPrice').innerHTML = "$"+data[0][2].floorPrice;
+        document.getElementById('totalPrice').innerHTML = data[0][2].floorPrice;
         let profileImg = document.getElementById("img"); 
         profileImg.src =  data[0][2].profile;
     }
     if(data[0][3].id == id){
-        document.getElementById('items').innerHTML = data[0][3].items;
+        document.getElementById('items').innerHTML = data[0][3].name;
         document.getElementById('floorPrice').innerHTML = data[0][3].floorPrice;
-        document.getElementById('totalPrice').innerHTML = "$"+data[0][3].floorPrice;
+        document.getElementById('totalPrice').innerHTML = data[0][3].floorPrice;
         let profileImg = document.getElementById("img"); 
         profileImg.src =  data[0][3].profile;
     }
@@ -103,6 +103,7 @@ function saveText(text, filename){
         if(data[0][1].id == id){
             
         ev.preventDefault();  //to stop the form submitting
+        
         let pay = {
             id: od,
             items: data[0][1].items,
@@ -166,27 +167,6 @@ function saveText(text, filename){
         }
     }
     
-
-
-
-    //     ev.preventDefault();  //to stop the form submitting
-    //     let pay = {
-    //         cardNumber : document.getElementById('cardNumber').value,
-    //         cardHolder : document.getElementById('cardHolder').value,
-    //         expMonth : document.getElementById('expMonth').value,
-    //         expYear : document.getElementById('expYear').value,
-    //         cvv : document.getElementById('cvv').value,
-    //     }
-    //     payment_Details.push(pay);
-
-    //     //saving to localStorage
-    //     localStorage.setItem('payment_Details', JSON.stringify(payment_Details) );
-    //     var getAll = localStorage.getItem("payment_Details");
-
-    //     saveText( getAll, "payment_details.json" );
-    //     location.href = "thanks.html"
-    // }
-        // document.getElementById("myForm").addEventListener("submit", myFunction);
 
 
 

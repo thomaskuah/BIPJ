@@ -31,6 +31,7 @@
         </ul>
       </nav>
       <hr>
+    <form action="thanks.html" id="newform">
     <div class="all">
     <h1 class="newItem">Create New Item</h1>
     <p style="padding-bottom: 20px;">Image, Video, Audio or 3D Model</p>
@@ -40,7 +41,7 @@
             <br>
             Maximum Upload Size is: 1.54MB
         </span>
-        <input type="file" name="myFile" id="image" class="drop-zone__input">
+        <input type="file" name="myFile" id="image" class="drop-zone__input" required>
       </div>
 
       <img id="testImg">
@@ -50,7 +51,7 @@
 
     <h1>Name of Artwork*</h1>
     <p style="padding-bottom: 20px;" >Please Use Your Full Name Of Your Artwork</p>
-    <input type="text" id="art" placeholder="E.g BAYC">
+    <input type="text" id="art" placeholder="E.g BAYC" required>
     
 
     <h1>External Link (Optional)</h1>
@@ -60,16 +61,14 @@
 
     <h1>Description*</h1>
     <p style="padding-bottom: 20px;">The description will be included on the item’s detail page underneath it’s image. Markdown Syntax is supported</p>
-    <textarea class="desc" id="desc" rows="8" cols="100" type="text" placeholder="Enter Description Here..."></textarea>
+    <textarea class="desc" id="desc" rows="8" cols="100" type="text" placeholder="Enter Description Here..." required></textarea>
     
     <h1>Collection*</h1>
     <p style="padding-bottom: 20px;" >This is the collection where your item will appear</p>
     <label for="Music" class="mus1">Music</label>
     <input type="checkbox" id="Music" name="Music" value="Music"><br>
-
     <label for="Domain Names" class="mus2">Domain Names</label>
     <input type="checkbox" id="Domain Names" name="Domain Names" value="Domain Names"><br>
-
     <label for="Photography" class="mus3">Photography</label>
     <input type="checkbox" id="Photography" name="Photography" value="Photography"><br>
     <label for="Sports" class="mus4">Sports</label>
@@ -95,13 +94,13 @@
 
     <h1>Supply</h1>
     <p style="padding-bottom: 20px;">The number of copies that can be minted</p>
-    <input type="number" id="supply" placeholder="1"> <br><br>
+    <input type="number" id="supply" placeholder="1" required> <br><br>
     
     <a href="thanks.html">
-    <input type="submit" id="btn" class="submit" value="NEXT">
-  </a>
+    <input type="submit" id="btn" class="submit" value="Next">
+    </a>
     </div>
-
+  </form>
     <script src="Create.js"></script>
 
 </body>
